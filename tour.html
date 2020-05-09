@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="container mt-3">
+    <p class="display-4 mt-4" data-test="title"><b>{{ tour.title }}   {{tour.stars}}★</b></p>
+
+    <!-- HERO -->
+    <ul class="list-inline">
+           <li class="list-inline-item"><strong> {{ tour.country }}</strong></li>
+           <li class="list-inline-item"><b>{{ tour.nights }} ночей</b></li>
+    </ul>
+	<img data-test="picture" src={{ tour.picture }} class="w-75" alt="">
+    <p class="my-4 w-75" data-test="description">{{ tour.description }}</p>
+    <a href="https://vk.com/elena_sidorova" class="btn btn-success btn-lg" data-test="buybutton">Купить тур за <span data-test="price">{{tour.price}}</span></a>
+</div>
+{% endblock %}
